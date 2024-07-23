@@ -35,11 +35,17 @@ export class TutorialsListComponent implements OnInit {
     this.currentIndex = -1;
   }
 
-  setActiveTutorial(tutorial: Tutorial, index: number): void {
+  setActiveTutorial(
+    tutorial: Tutorial,
+    index: number,
+    event?: MouseEvent
+  ): void {
+    if (event) {
+      event.stopPropagation();
+    }
     this.currentTutorial = tutorial;
     this.currentIndex = index;
   }
-
   removeAllTutorials(): void {
     this.tutorialService.deleteAll().subscribe({
       next: (res) => {

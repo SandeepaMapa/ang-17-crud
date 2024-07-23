@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Tutorial } from 'src/app/models/tutorial.model';
-import { TutorialService } from 'src/app/services/tutorial.service';
+import { Tutorial } from '../../models/tutorial.model';
+import { TutorialService } from '../../services/tutorial.service';
 
 @Component({
   selector: 'app-add-tutorial',
